@@ -80,9 +80,6 @@
 #define configTIMER_QUEUE_LENGTH                 10
 #define configTIMER_TASK_STACK_DEPTH             256
 
-/* The following flag must be enabled only when using newlib */
-#define configUSE_NEWLIB_REENTRANT          1
-
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
 #define INCLUDE_vTaskPrioritySet            1
@@ -102,7 +99,7 @@ to exclude the API function. */
  * The CMSIS-RTOS V2 FreeRTOS wrapper is dependent on the heap implementation used
  * by the application thus the correct define need to be enabled below
  */
-#define USE_FreeRTOS_HEAP_4
+#define USE_FreeRTOS_HEAP_1
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS
@@ -147,7 +144,8 @@ standard names. */
 
 /* USER CODE BEGIN Defines */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
-#define configCOMMAND_INT_MAX_OUTPUT_SIZE		(256)
+/* CLI */
+#define configCOMMAND_INT_MAX_OUTPUT_SIZE        (256)
 /* USER CODE END Defines */
 
 #endif /* FREERTOS_CONFIG_H */

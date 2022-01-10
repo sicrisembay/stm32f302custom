@@ -69,6 +69,7 @@
   */
 
 /* USER CODE BEGIN EXPORTED_TYPES */
+typedef void (*ptrFcnRxCb)(uint8_t* Buf, uint32_t *Len);
 
 /* USER CODE END EXPORTED_TYPES */
 
@@ -113,7 +114,8 @@ extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
 uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
 
 /* USER CODE BEGIN EXPORTED_FUNCTIONS */
-
+uint8_t CDC_Trasmit_is_busy(void);
+void CDC_Register_ReceiveCB(ptrFcnRxCb fcnCb);
 /* USER CODE END EXPORTED_FUNCTIONS */
 
 /**

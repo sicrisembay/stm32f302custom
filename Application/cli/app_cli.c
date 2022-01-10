@@ -5,6 +5,7 @@
 #include "queue.h"
 #include "FreeRTOS_CLI.h"
 #include "app_cli.h"
+#include "cmd/cmd_power.h"
 
 static StaticTask_t xTaskBuffer;
 static StackType_t xStack[APP_CLI_TASK_STACK_SIZE];
@@ -36,6 +37,8 @@ void APP_cli_init(void)
 			osPriorityNormal1,
 			xStack,
 			&xTaskBuffer);
+
+	CMD_power_init();
 }
 
 static void vTaskCommandConsole(void * pvParam)

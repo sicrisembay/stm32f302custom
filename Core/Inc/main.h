@@ -70,6 +70,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define USB_PULL_Pin LL_GPIO_PIN_15
 #define USB_PULL_GPIO_Port GPIOA
+#define RELAY_Pin LL_GPIO_PIN_5
+#define RELAY_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
